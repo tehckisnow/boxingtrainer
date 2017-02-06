@@ -1,14 +1,24 @@
 import winsound, time, random
-winsound.PlaySound("recording.wav", winsound.SND_FILENAME)
-time.sleep(5)
-winsound.PlaySound("beet.wav", winsound.SND_FILENAME)
 
-## import os
-## os.system("start C:/Recording.m4a")
-## os.system("start C:/Recording.m4a")
+techniques = ["jab.wav", "cross.wav", "leadhook.wav", "leaduppercut.wav", "leadelbow.wav", "rearelbow.wav"]
+allhits = len(techniques)-1
+numberofcombos = 5
+#winsound.PlaySound(startbell.wav, winsound.SND_FILENAME)
+for hit in range(numberofcombos):
+    combolength = random.randint(1, 4)
+    for bam in range(combolength):
+        num = random.randint(0, allhits)
+        print(techniques[num])
+        #winsound.PlaySound(techniques[allhits], winsound.SND_FILENAME)
+    print("    pause")
+    time.sleep(1)
 
-techniques = [[jab, cross, hook], [catch, parry, shoulder roll]]
-for
-    random.randint
-clip =
-winsound.PlaySound(clip, winsound.SND_FILENAME)
+#winsound.PlaySound(startbell.wav, winsound.SND_FILENAME)
+
+#jab.wav
+#cross.wav
+#leadhook.wav
+#leaduppercut.wav
+#leadelbow.wav
+#rearelbow.wav
+#startbell.wav
