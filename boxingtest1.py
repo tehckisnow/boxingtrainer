@@ -1,13 +1,24 @@
-import random
-import time
-attacks=["jab", "jab", "jab", "jab", "cross", "cross", "cross", "lead hook", "rear hook", "lead uppercut", "rear uppercut"]
-wait = [0, 0, 0, 1, 2]
-numberofhits = 10
-ln1 = len(attacks) - 1
-ln2 = len(wait) - 1
-for hit in range(numberofhits):
-    num = random.randint (0, ln1)
-    print(attacks[num])
-    num2 = random.randint(0, ln2)
-    time.sleep(wait[num2])
-    
+import winsound, time, random
+
+techniques = ["jab.wav", "cross.wav", "leadhook.wav", "leaduppercut.wav", "leadelbow.wav", "rearelbow.wav"]
+allhits = len(techniques)-1
+numberofcombos = 5
+#winsound.PlaySound(startbell.wav, winsound.SND_FILENAME)
+for hit in range(numberofcombos):
+    combolength = random.randint(1, 4)
+    for bam in range(combolength):
+        num = random.randint(0, allhits)
+        print(techniques[num])
+        #winsound.PlaySound(techniques[allhits], winsound.SND_FILENAME)
+    print("    pause")
+    time.sleep(1)
+
+#winsound.PlaySound(startbell.wav, winsound.SND_FILENAME)
+
+#jab.wav
+#cross.wav
+#leadhook.wav
+#leaduppercut.wav
+#leadelbow.wav
+#rearelbow.wav
+#startbell.wav
